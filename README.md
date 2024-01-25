@@ -1,5 +1,4 @@
-# Testcraft  
-  
+# Testcraft  [![MSBuild](https://github.com/NeoxyCN/Testcraft/actions/workflows/msbuild.yml/badge.svg)](https://github.com/NeoxyCN/Testcraft/actions/workflows/msbuild.yml)
 ## Requirement  
 C++ 20  
 Visual Studio 2022  
