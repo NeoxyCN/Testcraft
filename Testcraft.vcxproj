@@ -131,13 +131,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Block.cpp" />
+    <ClCompile Include="Source\GUI.cpp" />
     <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\Player.cpp" />
+    <ClCompile Include="Source\Render.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Block.h" />
     <ClInclude Include="Source\Debug.h" />
     <ClInclude Include="Source\Global.h" />
+    <ClInclude Include="Source\GUI.h" />
     <ClInclude Include="Source\LOG.h" />
     <ClInclude Include="Source\OS.h" />
+    <ClInclude Include="Source\Player.h" />
+    <ClInclude Include="Source\Render.h" />
     <ClInclude Include="Source\Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
