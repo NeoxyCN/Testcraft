@@ -1,12 +1,7 @@
-#define _CRT_SECURE_NO_WARNINGS
+#include "Game.h"
 
-#include "Global.h"
-#include "LOG.h"
-
-
-int main() {
-	LOG::INFO(GetVerisonInfo());
-	LOG::INFO("Initializing Testcraft");
+int main(int argc, char* argv[]) {
+	Game::Run(argc, argv);
 
 	return 0;
 }
