@@ -70,6 +70,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnableManifest>true</VcpkgEnableManifest>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -133,24 +136,31 @@
   <ItemGroup>
     <ClCompile Include="Source\Block.cpp" />
     <ClCompile Include="Source\Game.cpp" />
+    <ClCompile Include="Source\GL.cpp" />
     <ClCompile Include="Source\GUI.cpp" />
     <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\Network.cpp" />
     <ClCompile Include="Source\PerlinNoise.cpp" />
     <ClCompile Include="Source\Player.cpp" />
     <ClCompile Include="Source\Render.cpp" />
+    <ClCompile Include="Source\Server.cpp" />
+    <ClCompile Include="Source\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Block.h" />
     <ClInclude Include="Source\Debug.h" />
     <ClInclude Include="Source\Game.h" />
+    <ClInclude Include="Source\GL.h" />
     <ClInclude Include="Source\Global.h" />
     <ClInclude Include="Source\GUI.h" />
     <ClInclude Include="Source\LOG.h" />
+    <ClInclude Include="Source\Network.h" />
     <ClInclude Include="Source\OS.h" />
     <ClInclude Include="Source\PerlinNoise.h" />
     <ClInclude Include="Source\Player.h" />
     <ClInclude Include="Source\Render.h" />
     <ClInclude Include="Source\Time.h" />
+    <ClInclude Include="Source\Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

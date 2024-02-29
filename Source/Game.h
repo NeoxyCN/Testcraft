@@ -8,11 +8,10 @@ namespace Game {
 		WebGL,
 	};
 
-	bool ShouldStop = false;
+	//bool ShouldStop = false;
 
 	void Run(int argc, char* argv[]);
 	void Init(int argc, char* argv[]);
-	bool InitOpenGL();
 	void Loop();
-	int Exit();
+	int Exit(int status = 0);
 }

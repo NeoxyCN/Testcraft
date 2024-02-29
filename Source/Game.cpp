@@ -1,33 +1,41 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include "Game.h"
-
 #include "Global.h"
 #include "LOG.h"
+#include "GL.h"
 
 namespace Game {
-	void Run(int argc, char* argv[]) {
+	GL gl;
 
+	void Run(int argc, char* argv[]) {
+		Game::Init(argc, argv);
+		Game::Loop();
 	}
 
 	void Init(int argc,char* argv[]) {
+		const int _width = 800;
+		const int _height = 600;
+		const char* _title = "Testcraft";
+
 		LOG::INFO(GetVerisonInfo());
 		LOG::INFO("Initializing Testcraft");
-	}
-
-	bool InitOpenGL() {
-
+		GL gl(_width, _height, _title);
 	}
 
 	void Loop(){
-		while (0)
-		{
+		while (glfwWindowShouldClose(gl.Window)) {
 
 		}
 	}
 
-	int Exit() {
+	// Exit code
+	// 0	Normal
+	// 1	Fail to initialize GLFW
+	// 2	Fail to initialize GLEW
+	int Exit(int status=0) {
+		//TODO: Clean memory
 
-		return 0;
+		return status;
 	}
 }

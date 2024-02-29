@@ -5,3 +5,7 @@ Player::Player()
 {
 	int i = 0;
 }
+
+void Player::GetPos() {
+
+}
