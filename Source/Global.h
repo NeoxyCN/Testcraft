@@ -16,7 +16,7 @@
 #define VERSION_COMMIT 0
 #define VERSION_STR_(_I) #_I
 #define VERSION_STR(_I) VERSION_STR_(_I)
-#define VERSION_STRING_COMPILER_DATE __DATE__ " " \
+#define VERSION_STRING_COMPILE_DATE __DATE__ " " \
 									__TIME__
 //TODO: Compiler type
 #define VERSION_STRING_COMPILER "MSVC"
@@ -26,17 +26,17 @@
 							   VERSION_STATUS " " \
 							   VERSION_STR(VERSION_BUILDNUMBER) " (" \
 							   VERSION_STRING_COMPILER " " \
-							   VERSION_STRING_COMPILER_DATE ")"
+							   VERSION_STRING_COMPILE_DATE ")"
 #define VERSION_STRING_SNAPSHOT VERSION_STR(VERSION_MAJOR) "." \
 							    VERSION_STR(VERSION_MINOR) "." \
 						  	    VERSION_STR(VERSION_REVISION) " " \
 							    VERSION_STATUS " " \
 							    VERSION_SNAPSHOT_NAME " (" \
 								VERSION_STRING_COMPILER " " \
-							    VERSION_STRING_COMPILER_DATE ")"
+							    VERSION_STRING_COMPILE_DATE ")"
 
 
-auto GetVerisonInfo() {
+inline auto GetVerisonInfo() {
 #if RELEASE_TYPE == 0
 	return VERSION_STRING_RELEASE;
 #elif RELEASE_TYPE == 1
