@@ -1,14 +1,17 @@
 #pragma once
 
-#include "GLFW/glfw3.h"
+#define _CRT_SECURE_NO_WARNINGS
+
 #include "GL/glew.h"
+#include "GLFW/glfw3.h"
+
+#include "Game.h"
 
 class GL {
 
 public:
-	GLFWwindow* Window;
-	GL(int width,int height,const char* title);
+	GLFWwindow* Window=NULL;
 
-private:
-	void InitESCKey();
+	GL() {};
+	GL(int width,int height,const char* title);
 };

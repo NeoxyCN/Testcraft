@@ -1,7 +1,12 @@
-#include "GL.h"
+#pragma once
 
+#include "GL.h"
 #include "LOG.h"
-#include "Game.h"
+
+//ÀàÐÍºóÖÃ type postfixing
+auto test() -> int {
+	return 1;
+}
 
 GL::GL(int width, int height, const char* title) {
 	glfwInit();
@@ -31,6 +36,3 @@ GL::GL(int width, int height, const char* title) {
 	
 }
 
-GL::InitESCKey() {
-
-}

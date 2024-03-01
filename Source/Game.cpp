@@ -9,6 +9,7 @@ namespace Game {
 	GL gl;
 
 	void Run(int argc, char* argv[]) {
+		//LOG::INFO(GetVerisonInfo());
 		Game::Init(argc, argv);
 		Game::Loop();
 	}
@@ -33,9 +34,8 @@ namespace Game {
 	// 0	Normal
 	// 1	Fail to initialize GLFW
 	// 2	Fail to initialize GLEW
-	int Exit(int status=0) {
+	int Exit(int status) {
 		//TODO: Clean memory
-
 		return status;
 	}
 }
