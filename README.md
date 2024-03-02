@@ -1,6 +1,7 @@
 # Testcraft  [![MSBuild](https://github.com/NeoxyCN/Testcraft/actions/workflows/msbuild.yml/badge.svg)](https://github.com/NeoxyCN/Testcraft/actions/workflows/msbuild.yml)
 a Minecraft-like game, written by C++ and OpenGL.  
-Ò»¸ö·ÂMinecraftµÄÓÎÏ·£¬Ê¹ÓÃC++ºÍOpenGL±àÐ´¡£
+Ò»ï¿½ï¿½ï¿½ï¿½Minecraftï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½Ê¹ï¿½ï¿½C++ï¿½ï¿½OpenGLï¿½ï¿½Ð´ï¿½ï¿½
+a Minecraft-like game, written in C++ and OpenGL.  
 
 ## Requirement  
 C++ 20  
