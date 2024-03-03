@@ -1,3 +1,5 @@
+// legacy
+
 #pragma once
 
 #define _CRT_SECURE_NO_WARNINGS
@@ -10,8 +12,9 @@
 class GL {
 
 public:
-	GLFWwindow* Window=NULL;
+	GLFWwindow* Window;
 
 	GL() {};
 	GL(int width,int height,const char* title);
+	~GL();
 };
