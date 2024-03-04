@@ -12,7 +12,7 @@
 class GL {
 
 public:
-	GLFWwindow* Window;
+	GLFWwindow* Window=NULL;
 
 	GL() {};
 	GL(int width,int height,const char* title);

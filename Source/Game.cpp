@@ -7,6 +7,7 @@
 #include "Global.h"
 #include "LOG.h"
 #include "Window.h"
+#include "Render.h"
 
 void FrameCallback(GLFWwindow* window, int width, int height);
 
@@ -58,22 +59,19 @@ namespace Game {
 		while (!glfwWindowShouldClose(Window)) {
 			Window::Key(Window);
 			
-			//glClearColor(1.f, 1.f, 0.f, 1.f);
-			//glClear(GL_COLOR_BUFFER_BIT);
-			glBegin(GL_TRIANGLES);
+			glClearColor(0.f, 0.f, 0.f, 0.f);
+			glClear(GL_COLOR_BUFFER_BIT);
 
-			glColor3f(1.0, 0.0, 0.0);
-			glVertex3f(0.0, 1.0, 0.0);
+			//glBegin(GL_TRIANGLES);
+			//glColor3f(1.0, 0.0, 0.0);
+			//glVertex3f(0.0, 1.0, 0.0);
+			//glColor3f(0.0, 1.0, 0.0);
+			//glVertex3f(-1.0,-1.0,0.0);
+			//glColor3f(0.0, 0.0, 1.0);
+			//glVertex3f(1.0, -1.0, 0.0);
+			//glEnd();
 
-			glColor3f(0.0, 1.0, 0.0);
-			glVertex3f(-1.0,-1.0,0.0);
-
-			glColor3f(0.0, 0.0, 1.0);
-			glVertex3f(1.0, -1.0, 0.0);
-
-
-
-			glEnd();
+			Render::Block::Draw(0, 0, 0, 0);
 
 			glfwSwapBuffers(Window);
 			glfwPollEvents();

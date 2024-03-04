@@ -1,34 +1,53 @@
 #pragma once
 
+#include "GL/glew.h"
+#include "GLFW/glfw3.h"
+
 namespace Render {
-	namespace GL {
+	namespace Block {
+		void Draw(int x, int y, int z, int TextureID);
+		void DrawTexture(int x, int y, int z, int TextureID);
+	}
+
+	namespace GUI {
+		void Container();
+		void Label();
+		void Button();
+		void List();
+		void Scrollbar();
+		void Image();
+
+		namespace Group{
+			void Toolbar();
+			void MainMenu();
+			void WorldMenu();
+			void SettingMenu();
+			void PauseMenu();
+			void DebugInfo();
+			void Chat();
+			void Inventory();
+		}
+	}
+
+	namespace Player {
 
 	}
 
-	namespace Game {
-		namespace Block {
-			void Draw(int x, int y, int z, int TextureID);
+	namespace World {
+
+	}
+
+	namespace Entity {
+		namespace Item {
+			void Draw();
 		}
 
-		namespace GUI {
-			void Container();
-			void Label();
-			void Button();
-			void List();
-			void Scrollbar();
-			void Image();
+		namespace Animal {
+			void Draw();
 		}
 
-		namespace Player {
-
-		}
-
-		namespace World {
-
-		}
-
-		namespace Entity {
-
+		namespace Plant{
+			void Draw();
 		}
 	}
 }
