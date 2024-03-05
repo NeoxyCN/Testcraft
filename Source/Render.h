@@ -17,6 +17,7 @@ namespace Render {
 		void Scrollbar();
 		void Image();
 
+
 		namespace Group{
 			void Toolbar();
 			void MainMenu();
@@ -38,6 +39,12 @@ namespace Render {
 	}
 
 	namespace Entity {
+
+		template<typename T>
+		T Et(T i) {
+
+		}
+
 		namespace Item {
 			void Draw();
 		}
