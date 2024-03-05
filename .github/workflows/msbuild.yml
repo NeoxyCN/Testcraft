@@ -37,19 +37,19 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: nuget restore ${{env.SOLUTION_FILE_PATH}}
 
-    - name: Restore vcpkg and its artifacts.
-      uses: actions/cache@v2
-      id: vcpkg-cache
-      with:
-      path: |
-         ${{ env.VCPKG_ROOT }}
-         ${{ github.workspace }}/build/vcpkg_installed
-         !${{ env.VCPKG_ROOT }}/.git
-         !${{ env.VCPKG_ROOT }}/buildtrees
-         !${{ env.VCPKG_ROOT }}/packages
-         !${{ env.VCPKG_ROOT }}/downloads
-      key: |
-         ${{ hashFiles( 'vcpkg.json' ) }}-${{ runner.os }}-cache-key-v1
+    # - name: Restore vcpkg and its artifacts.
+    #   uses: actions/cache@v2
+    #   id: vcpkg-cache
+    #   with:
+    #   run: |
+    #      ${{ env.VCPKG_ROOT }}
+    #      ${{ github.workspace }}/build/vcpkg_installed
+    #      !${{ env.VCPKG_ROOT }}/.git
+    #      !${{ env.VCPKG_ROOT }}/buildtrees
+    #      !${{ env.VCPKG_ROOT }}/packages
+    #      !${{ env.VCPKG_ROOT }}/downloads
+    #   key: |
+    #      ${{ hashFiles( 'vcpkg.json' ) }}-${{ runner.os }}-cache-key-v1
 
     - name: Install vcpkg dependencies
       run: |
@@ -67,3 +67,10 @@ jobs:
     #   # Add additional options to the MSBuild command line here (like platform or verbosity level).
     #   # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
     #   run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with: 
+        name: Testcraft
+        path: ./x64/Release/Testcraft.exe
+        retention-days: 5
+
