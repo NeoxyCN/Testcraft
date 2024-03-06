@@ -14,7 +14,7 @@ on:
 env:
   # Path to the solution file relative to the root of the project.
   SOLUTION_FILE_PATH: .
-
+  VCPKG_BINARY_SOURCES: "clear;x-gha,readwrite"
   # Configuration type to build.
   # You can convert this to a build matrix if you need coverage of multiple configuration types.
   # https://docs.github.com/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
@@ -37,6 +37,12 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: nuget restore ${{env.SOLUTION_FILE_PATH}}
 
+    - name: Export GitHub Actions cache environment variables
+      uses: actions/github-script@v6
+      with:
+       script: |
+         core.exportVariable('ACTIONS_CACHE_URL', process.env.ACTIONS_CACHE_URL || '');
+         core.exportVariable('ACTIONS_RUNTIME_TOKEN', process.env.ACTIONS_RUNTIME_TOKEN || '');
     # - name: Restore vcpkg and its artifacts.
     #   uses: actions/cache@v2
     #   id: vcpkg-cache
@@ -72,5 +78,5 @@ jobs:
       with: 
         name: Testcraft
         path: ./x64/Release/Testcraft.exe
-        retention-days: 5
+        retention-days: 90
 
