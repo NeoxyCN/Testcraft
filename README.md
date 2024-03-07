@@ -13,5 +13,6 @@ glfw
 ## Build
 1. Clone this repo  
 2. Open solution  
-3. Build  
+3. Open Powershell and run ``vcpkg install``  
+4. Build  
 
