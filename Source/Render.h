@@ -35,7 +35,9 @@ namespace Render {
 	}
 
 	namespace World {
+		namespace Skybox {
 
+		}
 	}
 
 	namespace Entity {
