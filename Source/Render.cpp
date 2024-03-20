@@ -3,33 +3,52 @@
 namespace Render {
 	namespace Block {
 		void Draw(int x, int y, int z, int TextureID) {
+
+			GLfloat v[][3] = {
+				{0,0,0},
+				{1,0,0},
+				{1,1,0},
+				{0,1,0},
+				{0,1,1},
+				{0,0,1},
+				{1,0,1},
+				{1,1,1}
+			};
+
+			GLfloat index[][4] = {
+				0,1,2,3,
+				0,1,6,5,
+				1,2,7,6,
+				3,2,7,4,
+				4,5,6,7,
+				0,3,4,5
+			};
+
+			GLfloat colors[][3] = {
+				{0, 0, 0},
+				{1, 0, 0},
+				{1, 1, 0},
+				{0, 1, 0},
+				{0, 0, 1},
+				{1, 0, 1},
+				{1, 1, 1},
+				{0, 1, 1}
+			};
+
 			glBegin(GL_QUADS);
 
-			//top
-			glColor3f(1.0, 0.0, 0.0);
-			glVertex3f(0.0, 1.0, 0.0);
-			glColor3f(0.0, 1.0, 0.0);
-			glVertex3f(-1.0, -1.0, 0.0);
-			glColor3f(0.0, 0.0, 1.0);
-			glVertex3f(1.0, -1.0, 0.0);
-			glColor3f(1.0, 0.3, 0.8);
-			glVertex3f(1.0, 1.0, 0.0);
+			for (int i = 0; i < 5; i++) {
+				for (int j = 0; j < 3; j++)
+				{
 
-			//bottom
-
-			//front
-
-			//back
-
-			//right
-
-			//left
-
+				}
+			}
+			
 			glEnd();
 		}
 
 		void DrawTexture(int x, int y, int z, int TextureID) {
-		
+
 		}
 
 	}
