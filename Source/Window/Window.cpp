@@ -1,6 +1,6 @@
 #include "Window.h"
 
-#include "Game.h"
+#include "../Game/Game.h"
 
 namespace Window {
 	void Key(GLFWwindow* window) {

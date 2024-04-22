@@ -134,37 +134,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Block.cpp" />
-    <ClCompile Include="Source\Config.cpp" />
-    <ClCompile Include="Source\Game.cpp" />
+    <ClCompile Include="Source\Block\Block.cpp" />
+    <ClCompile Include="Source\Utils\Config.cpp" />
+    <ClCompile Include="Source\Game\Game.cpp" />
     <ClCompile Include="Source\Graphics\GL_Legacy.cpp" />
     <ClCompile Include="Source\GUI\GUI.cpp" />
     <ClCompile Include="Source\Main.cpp" />
-    <ClCompile Include="Source\Network.cpp" />
-    <ClCompile Include="Source\PerlinNoise.cpp" />
-    <ClCompile Include="Source\Player.cpp" />
-    <ClCompile Include="Source\Render.cpp" />
-    <ClCompile Include="Source\Server.cpp" />
-    <ClCompile Include="Source\Update.cpp" />
-    <ClCompile Include="Source\Window.cpp" />
+    <ClCompile Include="Source\Network\Network.cpp" />
+    <ClCompile Include="Source\Math\PerlinNoise.cpp" />
+    <ClCompile Include="Source\Game\Player.cpp" />
+    <ClCompile Include="Source\Render\Render.cpp" />
+    <ClCompile Include="Source\Server\Server.cpp" />
+    <ClCompile Include="Source\Game\Update.cpp" />
+    <ClCompile Include="Source\Window\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Block.h" />
-    <ClInclude Include="Source\Config.h" />
-    <ClInclude Include="Source\Debug.h" />
-    <ClInclude Include="Source\Game.h" />
+    <ClInclude Include="Source\Block\Block.h" />
+    <ClInclude Include="Source\Utils\Config.h" />
+    <ClInclude Include="Source\Utils\Debug.h" />
+    <ClInclude Include="Source\Game\Game.h" />
     <ClInclude Include="Source\Graphics\GL_Legacy.h" />
-    <ClInclude Include="Source\Global.h" />
+    <ClInclude Include="Source\Utils\Global.h" />
     <ClInclude Include="Source\GUI\GUI.h" />
-    <ClInclude Include="Source\LOG.h" />
-    <ClInclude Include="Source\Network.h" />
-    <ClInclude Include="Source\OS.h" />
-    <ClInclude Include="Source\PerlinNoise.h" />
-    <ClInclude Include="Source\Player.h" />
-    <ClInclude Include="Source\Render.h" />
-    <ClInclude Include="Source\Time.h" />
-    <ClInclude Include="Source\Update.h" />
-    <ClInclude Include="Source\Window.h" />
+    <ClInclude Include="Source\Utils\LOG.h" />
+    <ClInclude Include="Source\Network\Network.h" />
+    <ClInclude Include="Source\Utils\OS.h" />
+    <ClInclude Include="Source\Math\PerlinNoise.h" />
+    <ClInclude Include="Source\Game\Player.h" />
+    <ClInclude Include="Source\Render\Render.h" />
+    <ClInclude Include="Source\Utils\Time.h" />
+    <ClInclude Include="Source\Game\Update.h" />
+    <ClInclude Include="Source\Window\Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

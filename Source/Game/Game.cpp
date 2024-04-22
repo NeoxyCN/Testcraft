@@ -4,10 +4,10 @@
 #include "GLFW/glfw3.h"
 
 #include "Game.h"
-#include "Global.h"
-#include "LOG.h"
-#include "Window.h"
-#include "Render.h"
+#include "../Utils/Global.h"
+#include "../Utils/LOG.h"
+#include "../Window/Window.h"
+#include "../Render/Render.h"
 
 void FrameCallback(GLFWwindow* window, int width, int height);
 

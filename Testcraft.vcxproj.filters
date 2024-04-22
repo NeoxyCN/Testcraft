@@ -18,90 +18,90 @@
     <ClCompile Include="Source\Main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Render.cpp">
+    <ClCompile Include="Source\Render\Render.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Source\GUI\GUI.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Block.cpp">
+    <ClCompile Include="Source\Block\Block.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Player.cpp">
+    <ClCompile Include="Source\Game\Player.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Source\PerlinNoise.cpp">
+    <ClCompile Include="Source\Math\PerlinNoise.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Game.cpp">
+    <ClCompile Include="Source\Game\Game.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Network.cpp">
+    <ClCompile Include="Source\Network\Network.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Server.cpp">
+    <ClCompile Include="Source\Server\Server.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Source\Graphics\GL_Legacy.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Window.cpp">
+    <ClCompile Include="Source\Window\Window.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Update.cpp">
+    <ClCompile Include="Source\Game\Update.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Config.cpp">
+    <ClCompile Include="Source\Utils\Config.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\LOG.h">
+    <ClInclude Include="Source\Utils\LOG.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Time.h">
+    <ClInclude Include="Source\Utils\Time.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Global.h">
+    <ClInclude Include="Source\Utils\Global.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source\OS.h">
+    <ClInclude Include="Source\Utils\OS.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Debug.h">
+    <ClInclude Include="Source\Utils\Debug.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Render.h">
+    <ClInclude Include="Source\Render\Render.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Source\GUI\GUI.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Block.h">
+    <ClInclude Include="Source\Block\Block.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Player.h">
+    <ClInclude Include="Source\Game\Player.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source\PerlinNoise.h">
+    <ClInclude Include="Source\Math\PerlinNoise.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Game.h">
+    <ClInclude Include="Source\Game\Game.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Network.h">
+    <ClInclude Include="Source\Network\Network.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Source\Graphics\GL_Legacy.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Window.h">
+    <ClInclude Include="Source\Window\Window.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Update.h">
+    <ClInclude Include="Source\Game\Update.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Config.h">
+    <ClInclude Include="Source\Utils\Config.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
