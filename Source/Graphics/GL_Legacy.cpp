@@ -1,7 +1,7 @@
 #pragma once
 
-#include "GL.h"
-#include "LOG.h"
+#include "GL_Legacy.h"
+#include "../LOG.h"
 
 void FrameCallback(GLFWwindow* window, int width, int height);
 

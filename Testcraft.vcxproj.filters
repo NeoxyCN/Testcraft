@@ -21,7 +21,7 @@
     <ClCompile Include="Source\Render.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Source\GUI.cpp">
+    <ClCompile Include="Source\GUI\GUI.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Source\Block.cpp">
@@ -42,7 +42,7 @@
     <ClCompile Include="Source\Server.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Source\GL.cpp">
+    <ClCompile Include="Source\Graphics\GL_Legacy.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Source\Window.cpp">
@@ -74,7 +74,7 @@
     <ClInclude Include="Source\Render.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source\GUI.h">
+    <ClInclude Include="Source\GUI\GUI.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Source\Block.h">
@@ -92,7 +92,7 @@
     <ClInclude Include="Source\Network.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source\GL.h">
+    <ClInclude Include="Source\Graphics\GL_Legacy.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Source\Window.h">

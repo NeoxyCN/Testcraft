@@ -137,8 +137,8 @@
     <ClCompile Include="Source\Block.cpp" />
     <ClCompile Include="Source\Config.cpp" />
     <ClCompile Include="Source\Game.cpp" />
-    <ClCompile Include="Source\GL.cpp" />
-    <ClCompile Include="Source\GUI.cpp" />
+    <ClCompile Include="Source\Graphics\GL_Legacy.cpp" />
+    <ClCompile Include="Source\GUI\GUI.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Network.cpp" />
     <ClCompile Include="Source\PerlinNoise.cpp" />
@@ -153,9 +153,9 @@
     <ClInclude Include="Source\Config.h" />
     <ClInclude Include="Source\Debug.h" />
     <ClInclude Include="Source\Game.h" />
-    <ClInclude Include="Source\GL.h" />
+    <ClInclude Include="Source\Graphics\GL_Legacy.h" />
     <ClInclude Include="Source\Global.h" />
-    <ClInclude Include="Source\GUI.h" />
+    <ClInclude Include="Source\GUI\GUI.h" />
     <ClInclude Include="Source\LOG.h" />
     <ClInclude Include="Source\Network.h" />
     <ClInclude Include="Source\OS.h" />
