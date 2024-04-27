@@ -4,12 +4,14 @@
 
 namespace Game {
 	enum Graphics {
+		OpenGL_Legacy,
 		OpenGL,
+		OpenGLES,
+		Vulkan,
 		DirectX,
 		Metal,
-		Vulkan,
-		OpenGLES,
 		WebGL,
+		WebGPU
 	};
 
 	//bool ShouldStop = false;

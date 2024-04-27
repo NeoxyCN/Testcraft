@@ -8,6 +8,7 @@
 #include "../Utils/LOG.h"
 #include "../Window/Window.h"
 #include "../Render/Render.h"
+#include "../GUI/GUI.h"
 
 void FrameCallback(GLFWwindow* window, int width, int height);
 
@@ -20,6 +21,8 @@ namespace Game {
 	}
 
 	void Init(int argc,char* argv[]) {
+		//TODO: Get graphics type
+
 		LOG::INFO(GetVerisonInfo());
 		LOG::INFO("Initializing Testcraft");
 
@@ -41,6 +44,8 @@ namespace Game {
 			Game::Exit(1);
 		}
 
+		GUI::Widget widget(0, 0);
+
 		glfwMakeContextCurrent(Window);
 		//TODO: param for glewExp
 		glewExperimental = true;
@@ -53,25 +58,85 @@ namespace Game {
 		}
 
 
+		glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+
+		// 启用深度测试  
+		glEnable(GL_DEPTH_TEST);
+
+		// 配置视口  
+		glViewport(0, 0, 800, 600);
+
+		// 设置投影矩阵  
+		glMatrixMode(GL_PROJECTION);
+		glLoadIdentity();
+		gluPerspective(45.0f, (GLfloat)800.0 / (GLfloat)600.0, 0.1f, 100.0f);
+
+		// 设置模型视图矩阵  
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+		gluLookAt(3.0f, 3.0f, 3.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
 	}
 
+	//游戏循环
 	void Loop(){
 		while (!glfwWindowShouldClose(Window)) {
 			Window::Key(Window);
 			
-			glClearColor(0.f, 0.f, 0.f, 0.f);
-			glClear(GL_COLOR_BUFFER_BIT);
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-			//glBegin(GL_TRIANGLES);
-			//glColor3f(1.0, 0.0, 0.0);
-			//glVertex3f(0.0, 1.0, 0.0);
-			//glColor3f(0.0, 1.0, 0.0);
-			//glVertex3f(-1.0,-1.0,0.0);
-			//glColor3f(0.0, 0.0, 1.0);
-			//glVertex3f(1.0, -1.0, 0.0);
-			//glEnd();
+			// 启用背面剔除  
+			glEnable(GL_BACK);
 
-			Render::Block::Draw(0, 0, 0, 0);
+			// 绘制立方体  
+			glBegin(GL_QUADS); // 开始绘制由四个顶点组成的图形  
+
+			//// 绘制立方体前面  
+			//glNormal3f(0.0f, 0.0f, 1.0f);
+			//glVertex3f(1.0f, 1.0f, -1.0f);
+			//glVertex3f(-1.0f, 1.0f, -1.0f);
+			//glVertex3f(-1.0f, -1.0f, -1.0f);
+			//glVertex3f(1.0f, -1.0f, -1.0f);
+
+			// 绘制立方体后面
+			glNormal3f(0.0f, 0.0f, -1.0f);
+			glVertex3f(1.0f, -1.0f, 1.0f);
+			glVertex3f(-1.0f, -1.0f, 1.0f);
+			glVertex3f(-1.0f, 1.0f, 1.0f);
+			glVertex3f(1.0f, 1.0f, 1.0f);
+
+			// 绘制立方体左侧面  
+			//glNormal3f(-1.0f, 0.0f, 0.0f);
+			//glVertex3f(-1.0f, 1.0f, 1.0f);
+			//glVertex3f(-1.0f, 1.0f, -1.0f);
+			//glVertex3f(-1.0f, -1.0f, -1.0f);
+			//glVertex3f(-1.0f, -1.0f, 1.0f);
+
+			// 绘制立方体右侧面  
+			//glNormal3f(1.0f, 0.0f, 0.0f);
+			//glVertex3f(1.0f, 1.0f, -1.0f);
+			//glVertex3f(1.0f, 1.0f, 1.0f);
+			//glVertex3f(1.0f, -1.0f, 1.0f);
+			//glVertex3f(1.0f, -1.0f, -1.0f);
+
+			// 绘制立方体顶部  
+			//glNormal3f(0.0f, 1.0f, 0.0f);
+			//glVertex3f(1.0f, 1.0f, -1.0f);
+			//glVertex3f(-1.0f, 1.0f, -1.0f);
+			//glVertex3f(-1.0f, 1.0f, 1.0f);
+			//glVertex3f(1.0f, 1.0f, 1.0f);
+
+			//// 绘制立方体底部  
+			//glNormal3f(0.0f, -1.0f, 0.0f);
+			//glVertex3f(1.0f, -1.0f, 1.0f);
+			//glVertex3f(-1.0f, -1.0f, 1.0f);
+			//glVertex3f(-1.0f, -1.0f, -1.0f);
+			//glVertex3f(1.0f, -1.0f, -1.0f);
+
+			glEnd(); // 结束绘制  
+
+
+
 
 			glfwSwapBuffers(Window);
 			glfwPollEvents();
@@ -92,4 +157,8 @@ namespace Game {
 
 void FrameCallback(GLFWwindow* window, int width, int height) {
 	glViewport(0, 0, width, height);
+}
+
+void EnvDoctor() {
+
 }
