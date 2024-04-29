@@ -4,50 +4,50 @@
 namespace Render {
 	namespace Block {
 		void Draw(int x, int y, int z, int TextureID) {
-			glLoadIdentity();
-			glTranslatef(-1.5, 0.0, -7.0);
-
-			GLfloat vertex[][3] = {
-				{0,0,0},
-				{1,0,0},
-				{1,1,0},
-				{0,1,0},
-				{0,1,1},//左上 4
-				{0,0,1},//左下 5
-				{1,0,1},//右下 6
-				{1,1,1} //右上 7
-			};
-
-			int index[][4] = {
-				0,1,2,3,
-				0,1,6,5,
-				1,2,7,6,
-				3,2,7,4,
-				4,5,6,7,//正面
-				0,3,4,5
-			};
-
-			GLfloat colors[][3] = {
-				{0, 0, 0},
-				{1, 0, 0},
-				{1, 1, 0},
-				{0, 1, 0},
-				{0, 0, 1},
-				{1, 0, 1},
-				{1, 1, 1},
-				{0, 1, 1}
-			};
-
-			glBegin(GL_QUADS);
-
-			for (int i = 0; i < 6; i++) {
-				for (int j = 0; j < 4; j++)
-				{
-					glColor3fv(vertex[index[i][j]]);
-                    glVertex3fv(vertex[index[i][j]]);
-				}
-			}
 			
+			glBegin(GL_QUADS); // 开始绘制由四个顶点组成的图形  
+
+			//// 绘制立方体后面 back  
+			//glNormal3f(0.0f, 0.0f, 1.0f);
+			glVertex3f(1.0f, 1.0f, -1.0f);
+			glVertex3f(-1.0f, 1.0f, -1.0f);
+			glVertex3f(-1.0f, -1.0f, -1.0f);
+			glVertex3f(1.0f, -1.0f, -1.0f);
+
+			// 绘制立方体后面  front
+			glNormal3f(0.0f, 0.0f, -1.0f);
+			glVertex3f(1.0f, -1.0f, 1.0f);
+			glVertex3f(-1.0f, -1.0f, 1.0f);
+			glVertex3f(-1.0f, 1.0f, 1.0f);
+			glVertex3f(1.0f, 1.0f, 1.0f);
+
+			//绘制立方体左侧面  right
+			//glNormal3f(-1.0f, 0.0f, 0.0f);
+			glVertex3f(-1.0f, 1.0f, 1.0f);
+			glVertex3f(-1.0f, 1.0f, -1.0f);
+			glVertex3f(-1.0f, -1.0f, -1.0f);
+			glVertex3f(-1.0f, -1.0f, 1.0f);
+
+			// 绘制立方体右侧面  left
+			//glNormal3f(1.0f, 0.0f, 0.0f);
+			glVertex3f(1.0f, 1.0f, -1.0f);
+			glVertex3f(1.0f, 1.0f, 1.0f);
+			glVertex3f(1.0f, -1.0f, 1.0f);
+			glVertex3f(1.0f, -1.0f, -1.0f);
+
+			//// 绘制立方体顶部  top
+			//glNormal3f(0.0f, 1.0f, 0.0f);
+			glVertex3f(1.0f, 1.0f, -1.0f);
+			glVertex3f(-1.0f, 1.0f, -1.0f);
+			glVertex3f(-1.0f, 1.0f, 1.0f);
+			glVertex3f(1.0f, 1.0f, 1.0f);
+
+			//// 绘制立方体底部  bottom
+			//glNormal3f(0.0f, -1.0f, 0.0f);
+			glVertex3f(1.0f, -1.0f, 1.0f);
+			glVertex3f(-1.0f, -1.0f, 1.0f);
+			glVertex3f(-1.0f, -1.0f, -1.0f);
+			glVertex3f(1.0f, -1.0f, -1.0f);
 			glEnd();
 		}
 
