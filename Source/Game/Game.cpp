@@ -75,14 +75,14 @@ namespace Game {
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 			glEnable(GL_BACK);
 
-			//Render::Block::Draw(1, 1, 1, 1);
+			Render::Block::Draw(1, 1, 1, 1);
 
-			glBegin(GL_TRIANGLES);
-			glColor3f(1.0, 0.0, 0.0);
-			glVertex3f(1, 1, 1);
-			glVertex3f(0.5, 0.5, 0.5);
-			glVertex3f(1.5, 1.5, 1.5);
-			glEnd();
+			//glBegin(GL_TRIANGLES);
+			////glColor3f(1.0, 0.0, 0.0);
+			//glVertex3f(1, 1, 1);
+			//glVertex3f(0.5, 0.5, 0.5);
+			//glVertex3f(1.5, 1.5, 1.5);
+			//glEnd();
 
 			glfwSwapBuffers(Window);
 			glfwPollEvents();
